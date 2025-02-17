@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-sans antialiased bg-black text-foreground;
+    background: linear-gradient(to bottom right, #000000, #0a0a1f);
+  }
+}
+
+@layer utilities {
+  .neon-glow {
+    text-shadow: 0 0 10px theme('colors.primary.DEFAULT'),
+                 0 0 20px theme('colors.primary.DEFAULT'),
+                 0 0 30px theme('colors.primary.DEFAULT');
+  }
+
+  .neon-border {
+    box-shadow: 0 0 10px theme('colors.primary.DEFAULT'),
+                inset 0 0 10px theme('colors.primary.DEFAULT');
+  }
+
+  .cyber-gradient {
+    background: linear-gradient(135deg, 
+      #ff00ff 0%,
+      #00ffff 50%,
+      #ff00ff 100%
+    );
+  }
+
+  .cyber-grid {
+    background-image: linear-gradient(rgba(255, 0, 255, 0.1) 1px, transparent 1px),
+                      linear-gradient(90deg, rgba(255, 0, 255, 0.1) 1px, transparent 1px);
+    background-size: 20px 20px;
+  }
+}
